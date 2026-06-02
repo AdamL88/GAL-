@@ -60,7 +60,7 @@
 
     @media (max-width: 768px) {
       header::after {
-        top: 60%;
+        top: 53%;
       }
     }
 
@@ -110,7 +110,7 @@
       .nav-bar {
         flex-direction: column;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0rem;
       }
       .logo-img { width: 100px; }
       .nav-company-name {
@@ -118,10 +118,10 @@
         text-align: center;
         white-space: nowrap;
       }
-      .nav-contact { text-align: center; }
-      .hero-body { padding: 0.5rem 0 2rem; }
-      .hero-rule { margin-top: 2rem; }
-      .tagline { margin-top: 0.5rem; }
+      .nav-contact { text-align: center; line-height: 1.3; font-size: 0.7rem; }
+      .hero-body { padding: 0.15rem 0 0.15rem; }
+      .hero-rule { margin-top: 1rem; }
+      .tagline { margin-top: 0.1rem; font-size: clamp(2.441rem, 5.4vw, 3.66rem); line-height: 1.3; }
     }
 
     .nav-contact a {
@@ -274,7 +274,7 @@
     }
 
     .agency-item {
-      padding: 2.4rem 2rem 2.4rem 0;
+      padding: 2.4rem 2rem 0.2rem 0;
       border-bottom: 1px solid var(--rule);
     }
 
@@ -327,6 +327,16 @@
       line-height: 1.5;
       padding: 0.55rem 0;
       white-space: nowrap;
+    }
+
+    .agency-contact-note {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1rem, 2vw, 1.4rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--grey-mid);
+      margin-top: 1.2rem;
+      grid-column: 1 / -1;
     }
 
     /* ── ABOUT / INTRO ── */
@@ -767,7 +777,7 @@
 
     /* ── RESPONSIVE ── */
     @media (max-width: 768px) {
-      header { padding: 5rem 1.5rem 1.5rem; }
+      header { padding: 2.2rem 1.5rem 0.5rem; }
       section.services,
       section.agencies,
       section.about,
@@ -812,7 +822,7 @@
 
     <div class="hero-body">
 
-      <p class="tagline">Independent shipping agency and brokerage specialising in breakbulk,<br>container, heavy lift and project cargoes worldwide.</p>
+      <p class="tagline">Independent shipping agency and brokerage<br>specialising in breakbulk, container, heavy lift<br>and project cargoes worldwide.</p>
       <div class="hero-rule"></div>
     </div>
 
@@ -854,6 +864,7 @@
           <li>China — Korea — Red Sea — Med — Europe</li>
         </ul>
       </div>
+      <p class="agency-contact-note">Please contact us for current sailing schedules<br>and competitive freight quotations.</p>
     </div>
   </section>
 
