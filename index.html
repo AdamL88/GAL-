@@ -794,6 +794,11 @@
       .service-item:nth-child(even),
       .agency-item:nth-child(even) { padding-left: 0; border-left: none; }
       footer { padding: 2rem; flex-direction: column; gap: 1rem; text-align: center; }
+      .agency-routes li { white-space: normal; font-size: clamp(0.9rem, 4vw, 1.2rem); }
+      .agency-full { font-size: clamp(0.9rem, 4vw, 1.2rem); }
+      .agency-contact-note { font-size: clamp(0.9rem, 4vw, 1.2rem); }
+      section.agencies .about-text,
+      section.agencies p { font-size: clamp(0.9rem, 4vw, 1.2rem); }
     }
   </style>
 </head>
@@ -863,7 +868,7 @@
         <p class="agency-role">UK General Agent</p>
         <img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDI0LjAuMiwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IldhcnN0d2FfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgdmlld0JveD0iMCAwIDEzNy40IDEwMC44IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAxMzcuNCAxMDAuODsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDtmaWxsOiNFMzA2MTM7fQoJLnN0MXtmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDtmaWxsOiNEN0I0NkE7fQoJLnN0MntmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDtmaWxsOiNGRkVEMDA7fQoJLnN0M3tmaWxsLXJ1bGU6ZXZlbm9kZDtjbGlwLXJ1bGU6ZXZlbm9kZDtmaWxsOiNGRkZGRkY7fQo8L3N0eWxlPgo8Zz4KCTxyZWN0IHg9IjAiIHk9IjE4LjciIGNsYXNzPSJzdDAiIHdpZHRoPSIxMzcuNCIgaGVpZ2h0PSI2My40Ii8+Cgk8cG9seWdvbiBjbGFzcz0ic3QxIiBwb2ludHM9IjAsMTguNyAxMzcuNCwxOC43IDY4LjYsMCAwLDE4LjcgCSIvPgoJPHBvbHlnb24gY2xhc3M9InN0MSIgcG9pbnRzPSIwLDgyLjEgMTM3LjQsODIuMSA2OC42LDEwMC44IDAsODIuMSAJIi8+Cgk8cGF0aCBjbGFzcz0ic3QyIiBkPSJNNTkuNSwyOS4zbDUuNSwwbC01LjMsMTcuNGwtNi4zLTAuMWM0LTE0LjktMTQuOC0xOC4xLTE4LjQtNi4ybC00LjUsMTQuOWMtMy45LDEzLjMsMTQuOSwxOS40LDIwLDIuMmw1LjMsMC4xCgkJYy0xLjgsOS4yLTYuNiwxNS4zLTE1LjEsMTUuN2MtNS42LDAtNy4zLDAtMTMuMi0wLjFjLTUuOS0wLjItMTcuMi01LjktMTUuNi0xOS44YzEuMS01LjMsMy4zLTExLjEsNS0xNi4xYzIuMS01LjQsOS05LjcsMTQuNC0xMAoJCWwxMy41LDBjNC41LDAuMiw4LDIuMSw5LjcsNC41QzU1LjQsMzMuMyw1OC42LDM1LjYsNTkuNSwyOS4zTDU5LjUsMjkuM3oiLz4KCTxwYXRoIGNsYXNzPSJzdDMiIGQ9Ik04My4xLDI3LjVsMzMuNiwwYzUuNywwLDkuNiw2LjYsOC40LDExLjFsLTMuOSwxNC41Yy0xLjIsNC40LTUuMiw5LjMtMTMuNSw5LjVsLTEyLjMsMC4xbC0wLjksMi41CgkJYy0wLjUsMS42LDAuNywyLjgsMi4yLDIuOGw2LjQsMC4xbDAsNC45TDY5LjEsNzNsMS43LTUuNGMyLTAuMSwzLjYtMC45LDQuMy0zLjFMODUsMzMuMmgtMy44QzgxLjEsMzMuMiw4Mi45LDI3LjUsODMuMSwyNy41CgkJTDgzLjEsMjcuNXogTTEwNC43LDMzLjJsLTcuNSwyMy45YzIuNSwwLjUsNC44LTAuNiw1LjYtMi43bDUuNC0xNy44QzEwOSwzMywxMDQuNywzMy4yLDEwNC43LDMzLjJMMTA0LjcsMzMuMnoiLz4KCTxwb2x5Z29uIGNsYXNzPSJzdDIiIHBvaW50cz0iNjkuMSw1Mi42IDcwLjEsNDkuMyA2My45LDQ5LjMgNjIuOSw1Mi42IAkiLz4KCTxwb2x5Z29uIGNsYXNzPSJzdDMiIHBvaW50cz0iNjkuMSw1Mi42IDcwLjEsNDkuMyA3NS44LDQ5LjMgNzQuOCw1Mi42IAkiLz4KPC9nPgo8L3N2Zz4K" alt="Chipolbrok" style="height:72px; width:auto; display:block; margin-bottom:1rem;">
         <p class="agency-full">Chinese-Polish Joint Stock Shipping Company</p>
-        <p style="font-family:'Cormorant Garamond',serif; font-size:clamp(1rem,2vw,1.4rem); font-weight:300; line-height:1.7; color:var(--black); margin: 1.2rem 0;">Gdynia America Shipping Lines (London) Limited (GAL) is the General Agent in the UK &amp; the Republic of Ireland for the Chinese-Polish Joint Stock Shipping Company (Chipolbrok), booking cargoes for their worldwide services.</p>
+        <p style="font-family:'Cormorant Garamond',serif; font-size:clamp(0.9rem,4vw,1.4rem); font-weight:300; line-height:1.7; color:var(--black); margin: 1.2rem 0;">Gdynia America Shipping Lines (London) Limited (GAL) is the General Agent in the UK &amp; the Republic of Ireland for the Chinese-Polish Joint Stock Shipping Company (Chipolbrok), booking cargoes for their worldwide services.</p>
         <ul class="agency-routes">
           <li>China — Korea — US Gulf — US East Coast</li>
           <li>US East Coast — US Gulf — Far East</li>
